@@ -142,10 +142,8 @@ public class MainActivity extends Activity {
         super.onPrepareOptionsMenu(menu);
         if (hasCore()) {
             menu.findItem(R.id.menu_action_settings).setVisible(false);
-            menu.findItem(R.id.menu_action_about).setVisible(false);
         } else {
             menu.findItem(R.id.menu_action_settings).setVisible(true);
-            menu.findItem(R.id.menu_action_about).setVisible(true);
         }
         return true;
     }
@@ -161,21 +159,8 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_action_share:
-                performShare();
-                return true;
             case R.id.menu_action_settings:
                 goSettings();
-                return true;
-            case R.id.menu_action_about:
-                goAbout();
-                return true;
-            case R.id.menu_action_help:
-                Intent helpIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.coolmic_help_url)));
-                startActivity(helpIntent);
-                return true;
-            case R.id.menu_action_quit:
-                exitApp();
                 return true;
             default:
                 Toast.makeText(getApplicationContext(), R.string.menu_action_default, Toast.LENGTH_SHORT).show();
