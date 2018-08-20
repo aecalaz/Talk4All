@@ -1,9 +1,9 @@
 [submodule "app/src/main/jni/libshout/libshout"]
 	path = app/src/main/jni/libshout/libshout
-	url = ../icecast-libshout.git
+	url =  https://github.com/CoolMicApp/icecast-libshout
 [submodule "app/src/main/jni/libcoolmic-dsp/libcoolmic-dsp"]
 	path = app/src/main/jni/libcoolmic-dsp/libcoolmic-dsp
-	url = ../libcoolmic-dsp.git
+	url = https://github.com/CoolMicApp/libcoolmic-dsp
 [submodule "app/src/main/jni/opus/opus"]
 	path = app/src/main/jni/opus/opus
 	url = https://git.xiph.org/opus.git
